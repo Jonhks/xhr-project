@@ -30,11 +30,14 @@ function addNews() {
         let photo = document.createElement('img');
         let span = document.createElement('span');
         let resumen = document.createElement('p');
+        let href = element.web_url;
+        console.log(href);
         li.className = 'collection-item avatar';
         photo.src=img;
         photo.className = 'circle'
         span.innerText = title;
         span.className = 'title';
+        span.href= `${href}`;
         resumen.innerText = snippet;
         responseContainer.appendChild(li);
         li.appendChild(photo);
